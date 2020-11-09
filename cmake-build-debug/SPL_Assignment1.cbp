@@ -84,7 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/main.cpp">
+		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/Agent.cpp">
+			<Option target="SPL_Assignment1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/Graph.cpp">
+			<Option target="SPL_Assignment1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/Session.cpp">
+			<Option target="SPL_Assignment1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/Tree.cpp">
+			<Option target="SPL_Assignment1"/>
+		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/main.cpp">
 			<Option target="SPL_Assignment1"/>
 		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/CMakeLists.txt">

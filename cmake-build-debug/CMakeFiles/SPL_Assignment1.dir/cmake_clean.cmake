@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SPL_Assignment1.dir/main.cpp.o"
+  "CMakeFiles/SPL_Assignment1.dir/src/Agent.cpp.o"
+  "CMakeFiles/SPL_Assignment1.dir/src/Graph.cpp.o"
+  "CMakeFiles/SPL_Assignment1.dir/src/Session.cpp.o"
+  "CMakeFiles/SPL_Assignment1.dir/src/Tree.cpp.o"
+  "CMakeFiles/SPL_Assignment1.dir/src/main.cpp.o"
   "SPL_Assignment1"
   "SPL_Assignment1.pdb"
 )

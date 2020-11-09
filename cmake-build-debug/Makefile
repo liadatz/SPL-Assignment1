@@ -59,10 +59,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/spl211/CLionProjects/SPL-Assignment1/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/spl211/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -143,32 +143,140 @@ SPL_Assignment1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/build
 .PHONY : SPL_Assignment1/fast
 
-main.o: main.cpp.o
+src/Agent.o: src/Agent.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Agent.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Agent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Agent.cpp.o
+.PHONY : src/Agent.cpp.o
 
-main.i: main.cpp.i
+src/Agent.i: src/Agent.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Agent.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Agent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Agent.cpp.i
+.PHONY : src/Agent.cpp.i
 
-main.s: main.cpp.s
+src/Agent.s: src/Agent.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Agent.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Agent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Agent.cpp.s
+.PHONY : src/Agent.cpp.s
+
+src/Graph.o: src/Graph.cpp.o
+
+.PHONY : src/Graph.o
+
+# target to build an object file
+src/Graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Graph.cpp.o
+.PHONY : src/Graph.cpp.o
+
+src/Graph.i: src/Graph.cpp.i
+
+.PHONY : src/Graph.i
+
+# target to preprocess a source file
+src/Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Graph.cpp.i
+.PHONY : src/Graph.cpp.i
+
+src/Graph.s: src/Graph.cpp.s
+
+.PHONY : src/Graph.s
+
+# target to generate assembly for a file
+src/Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Graph.cpp.s
+.PHONY : src/Graph.cpp.s
+
+src/Session.o: src/Session.cpp.o
+
+.PHONY : src/Session.o
+
+# target to build an object file
+src/Session.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Session.cpp.o
+.PHONY : src/Session.cpp.o
+
+src/Session.i: src/Session.cpp.i
+
+.PHONY : src/Session.i
+
+# target to preprocess a source file
+src/Session.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Session.cpp.i
+.PHONY : src/Session.cpp.i
+
+src/Session.s: src/Session.cpp.s
+
+.PHONY : src/Session.s
+
+# target to generate assembly for a file
+src/Session.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Session.cpp.s
+.PHONY : src/Session.cpp.s
+
+src/Tree.o: src/Tree.cpp.o
+
+.PHONY : src/Tree.o
+
+# target to build an object file
+src/Tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Tree.cpp.o
+.PHONY : src/Tree.cpp.o
+
+src/Tree.i: src/Tree.cpp.i
+
+.PHONY : src/Tree.i
+
+# target to preprocess a source file
+src/Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Tree.cpp.i
+.PHONY : src/Tree.cpp.i
+
+src/Tree.s: src/Tree.cpp.s
+
+.PHONY : src/Tree.s
+
+# target to generate assembly for a file
+src/Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/Tree.cpp.s
+.PHONY : src/Tree.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SPL_Assignment1.dir/build.make CMakeFiles/SPL_Assignment1.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -179,9 +287,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SPL_Assignment1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Agent.o"
+	@echo "... src/Agent.i"
+	@echo "... src/Agent.s"
+	@echo "... src/Graph.o"
+	@echo "... src/Graph.i"
+	@echo "... src/Graph.s"
+	@echo "... src/Session.o"
+	@echo "... src/Session.i"
+	@echo "... src/Session.s"
+	@echo "... src/Tree.o"
+	@echo "... src/Tree.i"
+	@echo "... src/Tree.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
