@@ -12,27 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c5596cf-0d15-49d3-ab92-06f0e9d38693" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Agent.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Session.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SPL-Assignment1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SPL-Assignment1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SPL_Assignment1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SPL_Assignment1.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604931774056</updated>
-      <workItem from="1604931775153" duration="7902000" />
+      <workItem from="1604931775153" duration="12375000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1604931813788</created>
@@ -109,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604933763258</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="all files and Graph">
+      <created>1604940007052</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604940007052</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,13 +108,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="check" />
-    <option name="LAST_COMMIT_MESSAGE" value="check" />
+    <MESSAGE value="all files and Graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="all files and Graph" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2" timestamp="1604933763042">
+    <state x="756" y="206" width="465" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1604943074086">
       <screen x="67" y="27" width="1853" height="923" />
     </state>
-    <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.923@67.27.1853.923" timestamp="1604933763042" />
+    <state x="756" y="206" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.923@67.27.1853.923" timestamp="1604943074086" />
+    <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2" timestamp="1604940006978">
+      <screen x="67" y="27" width="1853" height="923" />
+    </state>
+    <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.923@67.27.1853.923" timestamp="1604940006978" />
     <state x="624" y="250" width="728" height="475" key="MultipleFileMergeDialog" timestamp="1604933783086">
       <screen x="67" y="27" width="1853" height="923" />
     </state>
@@ -132,10 +128,10 @@
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="482" y="122" key="SettingsEditor/67.27.1853.923@67.27.1853.923" timestamp="1604932368816" />
-    <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1604939989896">
+    <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1604940016293">
       <screen x="67" y="27" width="1853" height="923" />
     </state>
-    <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.923@67.27.1853.923" timestamp="1604939989896" />
+    <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.923@67.27.1853.923" timestamp="1604940016293" />
     <state x="774" y="402" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604933714262">
       <screen x="67" y="27" width="1853" height="923" />
     </state>

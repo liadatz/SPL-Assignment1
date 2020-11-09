@@ -15,6 +15,7 @@ public:
     virtual int traceTree()=0;
 private:
     int node;
+    bool rootIsInfected;
     std::vector<Tree*> children;
 }
 
