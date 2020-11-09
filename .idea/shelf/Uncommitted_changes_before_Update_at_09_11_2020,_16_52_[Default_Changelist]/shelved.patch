@@ -1,0 +1,17 @@
+Index: main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include <iostream>\n#include \"include/Session.h\"\n\nusing namespace std;\n\nint main(int argc, char** argv){\n    if(argc != 2){\n        cout << \"usage cTrace <config_path>\" << endl;\n        return 0;\n        int a = 0;\n    }\n    Session sess(argv[1]);\n    sess.simulate();\n    return 0;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- main.cpp	(revision 60edce5d583686b8022c5c4cb47fae761b4856ae)
++++ main.cpp	(date 1604933522820)
+@@ -7,7 +7,6 @@
+     if(argc != 2){
+         cout << "usage cTrace <config_path>" << endl;
+         return 0;
+-        int a = 0;
+     }
+     Session sess(argv[1]);
+     sess.simulate();
