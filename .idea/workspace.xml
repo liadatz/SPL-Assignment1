@@ -15,23 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c5596cf-0d15-49d3-ab92-06f0e9d38693" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config1.json" beforeDir="false" afterPath="$PROJECT_DIR$/config1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Agent.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Agent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Session.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Session.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Tree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Agent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Session.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/json.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/json.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604931774056</updated>
       <workItem from="1604931775153" duration="12375000" />
-      <workItem from="1604999947463" duration="32270000" />
+      <workItem from="1604999947463" duration="34219000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1604931813788</created>
@@ -118,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604940007052</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed everything">
+      <created>1605043275308</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605043275308</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,17 +119,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="check" />
     <MESSAGE value="all files and Graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="all files and Graph" />
+    <MESSAGE value="Changed everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed everything" />
   </component>
   <component name="WindowStateProjectService">
     <state x="756" y="206" width="465" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1604943074086">
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="756" y="206" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.923@67.27.1853.923" timestamp="1604943074086" />
-    <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2" timestamp="1604940006978">
-      <screen x="67" y="27" width="1853" height="923" />
+    <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2" timestamp="1605043275034">
+      <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.923@67.27.1853.923" timestamp="1604940006978" />
+    <state x="532" y="35" key="CommitChangelistDialog2/67.27.1853.940@67.27.1853.940" timestamp="1605043275033" />
     <state x="624" y="250" width="728" height="475" key="MultipleFileMergeDialog" timestamp="1604933783086">
       <screen x="67" y="27" width="1853" height="923" />
     </state>
@@ -146,10 +140,11 @@
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="482" y="122" key="SettingsEditor/67.27.1853.923@67.27.1853.923" timestamp="1604932368816" />
-    <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1604940016293">
-      <screen x="67" y="27" width="1853" height="923" />
+    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605043278556">
+      <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.923@67.27.1853.923" timestamp="1604940016293" />
+    <state x="588" y="227" key="Vcs.Push.Dialog.v2/67.27.1853.940@67.27.1853.940" timestamp="1605043278556" />
     <state x="774" y="402" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604933714262">
       <screen x="67" y="27" width="1853" height="923" />
     </state>

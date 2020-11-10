@@ -30,7 +30,13 @@ Tree::Tree& operator=(Tree &&other){}
 
 
 //------------Methods--------------------
-void Tree::addChild(const Tree& child){}
+void Tree::addChild(const Tree& child){
+    Tree* const childClone = clone(child);
+    std::vector<Tree*>::iterator iterator;
+    int i = 0;
+    while (childClone->node > children[i]->node) i++;
+    children.insert(iterator,i,childClone);
+}
 
 void Tree::addChild(Tree* child) {}
 

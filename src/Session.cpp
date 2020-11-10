@@ -12,7 +12,7 @@ using namespace std;
 Session::Session(const std::string &path):g{{}} {
     ifstream i("../config1.json");
     json j;
-    j << i;
+    i >> j;
     g = Graph (j["graph"]);
 }
 
