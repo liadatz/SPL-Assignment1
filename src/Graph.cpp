@@ -2,12 +2,20 @@
 // Created by spl211 on 09/11/2020.
 //
 #include "../include/Graph.h"
-Graph::Graph(const std::vector<std::vector<int>> &matrix) : edges(&matrix){}
 
+Graph::Graph(std::vector<std::vector<int>> matrix):edges(matrix),nodesStatus(){
+    for (int i=0;i<edges.size();i++)
+        nodesStatus.push_back(false); // init node's vector
+}
 
-void infectNode(int nodeInd){
-        this._arr[nodeInd]=true;
+void Graph::infectNode(int nodeInd) {
+    nodesStatus.at(nodeInd) = true;
     }
-    bool isInfected(int nodeInd){
-        return _arr[nodeInd];
-    }
+
+bool Graph::isInfected(int nodeInd) {
+    return nodesStatus.at(nodeInd);
+}
+
+std::vector<std::vector<int>>& Graph::getEdges() {
+    return edges;
+}

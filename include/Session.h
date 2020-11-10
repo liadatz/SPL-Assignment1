@@ -20,15 +20,21 @@ public:
     void simulate();
     void addAgent(const Agent& agent);
     void setGraph(const Graph& graph);
+
     
     void enqueueInfected(int);
     int dequeueInfected();
+
+    // Getters
+    Graph& getGraphReference();
     TreeType getTreeType() const;
+    int getCurrCycle() const;
     
 private:
     Graph g;
     TreeType treeType;
     std::vector<Agent*> agents;
-}
+    int currCycle;
+};
 
 #endif
