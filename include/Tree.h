@@ -25,6 +25,11 @@ public:
     virtual int traceTree()=0;
     Tree& runBFS(Session& session,int rootLabel);
     Tree* getChild(int i);
+    void clear();
+    int getNodeNumber ();
+    std::vector<Tree*> getChildren();
+    int getNumOfChildren ();
+
 
 //------------Data-Members------------------
 protected:
