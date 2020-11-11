@@ -16,10 +16,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3c5596cf-0d15-49d3-ab92-06f0e9d38693" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Tree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Agent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,11 +62,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -84,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604931774056</updated>
       <workItem from="1604931775153" duration="12375000" />
-      <workItem from="1604999947463" duration="40601000" />
+      <workItem from="1604999947463" duration="40692000" />
+      <workItem from="1605118975125" duration="6639000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1604931813788</created>
@@ -121,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605045226685</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added traceTree for MaxRankTree and CycleTree">
+      <created>1605118427292</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605118427292</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +133,8 @@
     <MESSAGE value="all files and Graph" />
     <MESSAGE value="Changed everything" />
     <MESSAGE value="Added addChild in Tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added addChild in Tree" />
+    <MESSAGE value="Added traceTree for MaxRankTree and CycleTree" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added traceTree for MaxRankTree and CycleTree" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605117311403">
@@ -143,11 +145,11 @@
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="756" y="206" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.923@67.27.1853.923" timestamp="1604943074086" />
-    <state x="532" y="35" width="912" height="915" key="CommitChangelistDialog2" timestamp="1605045226589">
+    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2" timestamp="1605118427165">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.923@67.27.1853.923" timestamp="1604940006978" />
-    <state x="532" y="35" width="912" height="915" key="CommitChangelistDialog2/67.27.1853.940@67.27.1853.940" timestamp="1605045226589" />
+    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2/67.27.1853.940@67.27.1853.940" timestamp="1605118427165" />
     <state x="242" y="101" width="1482" height="782" key="DiffContextDialog" timestamp="1605045207988">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
@@ -160,11 +162,11 @@
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="482" y="122" key="SettingsEditor/67.27.1853.923@67.27.1853.923" timestamp="1604932368816" />
-    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605045228287">
+    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605118428885">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.923@67.27.1853.923" timestamp="1604940016293" />
-    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.940@67.27.1853.940" timestamp="1605045228287" />
+    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.940@67.27.1853.940" timestamp="1605118428885" />
     <state x="774" y="409" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605118367532">
       <screen x="67" y="27" width="1853" height="940" />
     </state>

@@ -2,54 +2,81 @@
 #include "../include/Session.h"
 #include <queue>
 
+using namespace std;
+
+// TODO:arrange methods in private and public
+
 //------------Rule-Of-5--------------------
 // Constructor
 Tree::Tree(int rootLabel) : node(rootLabel), children() {}
 
 // Destructor
 Tree::~Tree() {
-    delete this;
-    for (auto &child : children) {
-        delete (child);
-    }
-    children.clear();
+    delete this; // TODO:maybe delete 'this'?
+    clear();
 }
 
 // Copy Constructor
-Tree::Tree(const Tree &other) {
-
+Tree::Tree(const Tree &other) : node(other.node), children(){
+    for (auto& child : other.children) {
+        this->children.push_back(child->clone());
+    }
 }
 
 // Move Constructor
-Tree::Tree(Tree &&other) {}
+Tree::Tree(Tree &&other) : node(other.node), children() {
+    int i = 0;
+    for (auto &child : other.children) {
+        this->children[i] = other.children[i];
+        i++;
+    }
+    other.children.clear();
+}
 
 // Copy Assignment
-//Tree::Tree& operator=(const Tree &other){
-//    if (this!=&other) {
-//
-//    }
-//}
+Tree& Tree::operator=(const Tree &other){
+    if (this!=&other) {
+        this->node = other.node;
+        for (auto& child : other.children) {
+            this->children.push_back(child->clone());
+        }
+    }
+    return *this;
+}
 
 // Move Assignment
-//Tree::Tree& operator=(Tree &&other){
-//    if (this!=&other) {
-//
-//    }
-//}
+Tree& Tree::operator=(Tree &&other){
+    if (this!=&other) {
+        clear();
+        this->node = other.node;
+        int i = 0;
+        for (auto &child : other.children) {
+            this->children[i] = other.children[i];
+            i++;
+        }
+        other.children.clear();
+    }
+    return *this;
+}
 
 
 //------------Methods--------------------
 void Tree::addChild(const Tree &child) {
-    Tree *const childClone = clone(child);
-    std::vector<Tree *>::iterator iterator;
+    Tree* childClone = child.clone();
+    std::vector<Tree*>::iterator it = children.begin();
     int i = 0;
-    while (childClone->node > children[i]->node) i++;
-    children.insert(iterator, i, childClone);
+    while (childClone->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
+    children.insert(it, i, childClone);
 }
 
-void Tree::addChild(Tree *child) {}
+void Tree::addChild(Tree *child) {
+    Tree* childTree = new Tree (child); // TODO: check
+    std::vector<Tree*>::iterator it = children.begin();
+    int i = 0;
+    while (childTree->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
+    children.insert(it, i, childTree);
 
-Tree *Tree::clone(const Tree &tree) {}
+}
 
 Tree *Tree::createTree(const Session &session, int rootLabel) {
     Tree *tree;
@@ -59,27 +86,27 @@ Tree *Tree::createTree(const Session &session, int rootLabel) {
     return tree;
 }
 
-//Tree& Tree::runBFS(Session& session,int rootLabel) {
-//    Tree* tree = createTree(session,rootLabel);
-//    std::vector<std::vector<int>> edges = session.getGraphReference().getEdges();
-//    int numOfVertices = edges.size();
-//    int currVertex;
-//    std::vector<bool>visited(numOfVertices,false);
-//    std::queue<int> queue;
-//    visited[rootLabel] = true;
-//    queue.push(rootLabel);
-//    while (!queue.empty()) {
-//        currVertex = queue.front();
-//        for (int i = 0; i < numOfVertices; ++i) {
-//            if (!visited[i] && edges[currVertex][i] == 1) {
-//                visited[i] = true;
-//                tree->addChild(createTree(session,i));
-//                queue.push(i);
-//            }
-//        }
-//    }
-//    return *tree;
-//}
+Tree& Tree::runBFS(Session& session,int rootLabel) {
+    Tree* tree = createTree(session,rootLabel);
+    std::vector<std::vector<int>> edges = session.getGraphReference().getEdges();
+    int numOfVertices = edges.size();
+    int currVertex;
+    std::vector<bool>visited(numOfVertices,false);
+    std::queue<int> queue;
+    visited[rootLabel] = true;
+    queue.push(rootLabel);
+    while (!queue.empty()) {
+        currVertex = queue.front();
+        for (int i = 0; i < numOfVertices; ++i) {
+            if (!visited[i] && edges[currVertex][i] == 1) {
+                visited[i] = true;
+                tree->addChild(createTree(session,i));
+                queue.push(i);
+            }
+        }
+    }
+    return *tree;
+}
 
 Tree *Tree::getChild(int i) {
     if (i <= children.size()) return children[i];
@@ -91,12 +118,8 @@ void Tree::clear() {
     children.clear();
 }
 
-int Tree::getNodeNumber() {
+int Tree::getNodeNumber() const {
     return node;
-}
-
-std::vector<Tree *> Tree::getChildren() {
-    return children;
 }
 
 int Tree::getNumOfChildren() {
@@ -107,7 +130,6 @@ int Tree::getNumOfChildren() {
 CycleTree::CycleTree(int rootLabel, int currCycle) : Tree(rootLabel), currCycle(currCycle) {}
 
 int CycleTree::traceTree() {
-//    Tree* BFSTree = runBFS(session,node);
     int c = currCycle;
     int output = getNodeNumber();
     Tree *currTree;
@@ -119,6 +141,10 @@ int CycleTree::traceTree() {
     return output;
 }
 
+Tree* CycleTree::clone() const {
+    Tree* newCycleTree = new CycleTree(*this);
+    return newCycleTree;
+}
 //------------MaxRank-Tree--------------------
 MaxRankTree::MaxRankTree(int rootLabel) : Tree(rootLabel) {}
 
@@ -139,9 +165,19 @@ int MaxRankTree::traceTree() {
     return maxRankNode;
 }
 
+Tree* MaxRankTree::clone() const {
+    Tree* newMaxRankTree = new MaxRankTree(*this);
+    return newMaxRankTree;
+}
+
 //------------Root-Tree--------------------
 RootTree::RootTree(int rootLabel) : Tree(rootLabel) {}
 
 int RootTree::traceTree() {
     return node;
+}
+
+Tree* RootTree::clone() const {
+    Tree* newRootTree = new RootTree(*this);
+    return newRootTree;
 }

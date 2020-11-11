@@ -16,20 +16,17 @@ public:
     Tree& operator=(const Tree& other);
     Tree& operator=(Tree&& other);
 
-
 //------------Methods--------------------
     void addChild(const Tree& child);
     void addChild(Tree* child);
-    Tree * clone(const Tree& tree);
     static Tree* createTree(const Session& session, int rootLabel);
     virtual int traceTree()=0;
+    virtual Tree* clone() const=0;
     Tree& runBFS(Session& session,int rootLabel);
     Tree* getChild(int i);
     void clear();
-    int getNodeNumber ();
-    std::vector<Tree*> getChildren();
+    int getNodeNumber () const;
     int getNumOfChildren ();
-
 
 //------------Data-Members------------------
 protected:
@@ -42,6 +39,7 @@ class CycleTree: public Tree{
 public:
     CycleTree(int rootLabel, int currCycle);
     virtual int traceTree();
+    virtual Tree* clone() const;
 protected:
     int currCycle;
 };
@@ -51,6 +49,7 @@ class MaxRankTree: public Tree{
 public:
     MaxRankTree(int rootLabel);
     virtual int traceTree();
+    virtual Tree* clone() const;
 };
 
 //------------Root-Tree--------------------
@@ -58,6 +57,7 @@ class RootTree: public Tree{
 public:
     RootTree(int rootLabel);
     virtual int traceTree();
+    virtual Tree* clone() const;
 };
 
 #endif
