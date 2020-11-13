@@ -3,6 +3,8 @@
 
 #include <vector>
 #include "Session.h"
+#include "Graph.h"
+#include "Tree.h"
 
 class Agent{
 public:

@@ -16,8 +16,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3c5596cf-0d15-49d3-ab92-06f0e9d38693" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Agent.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Agent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Session.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Session.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Agent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Session.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +67,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,7 +78,7 @@
       <updated>1604931774056</updated>
       <workItem from="1604931775153" duration="12375000" />
       <workItem from="1604999947463" duration="40692000" />
-      <workItem from="1605118975125" duration="6639000" />
+      <workItem from="1605118975125" duration="16086000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1604931813788</created>
@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605118427292</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finish Tree Class">
+      <created>1605128605180</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605128605180</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +141,8 @@
     <MESSAGE value="Changed everything" />
     <MESSAGE value="Added addChild in Tree" />
     <MESSAGE value="Added traceTree for MaxRankTree and CycleTree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added traceTree for MaxRankTree and CycleTree" />
+    <MESSAGE value="Finish Tree Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Tree Class" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605117311403">
@@ -145,11 +153,11 @@
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="756" y="206" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.923@67.27.1853.923" timestamp="1604943074086" />
-    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2" timestamp="1605118427165">
+    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2" timestamp="1605128604944">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.923@67.27.1853.923" timestamp="1604940006978" />
-    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2/67.27.1853.940@67.27.1853.940" timestamp="1605118427165" />
+    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2/67.27.1853.940@67.27.1853.940" timestamp="1605128604944" />
     <state x="242" y="101" width="1482" height="782" key="DiffContextDialog" timestamp="1605045207988">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
@@ -162,24 +170,24 @@
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="482" y="122" key="SettingsEditor/67.27.1853.923@67.27.1853.923" timestamp="1604932368816" />
-    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605118428885">
+    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605128606840">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.923@67.27.1853.923" timestamp="1604940016293" />
-    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.940@67.27.1853.940" timestamp="1605118428885" />
-    <state x="774" y="409" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605118367532">
+    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.940@67.27.1853.940" timestamp="1605128606840" />
+    <state x="774" y="409" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605128566314">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="774" y="402" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.923@67.27.1853.923" timestamp="1604933714262" />
-    <state x="774" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.940@67.27.1853.940" timestamp="1605118367532" />
+    <state x="774" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.940@67.27.1853.940" timestamp="1605128566314" />
     <state x="826" y="281" width="325" height="429" key="refactoring.ChangeSignatureDialog" timestamp="1605023890036">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="826" y="281" width="325" height="429" key="refactoring.ChangeSignatureDialog/67.27.1853.940@67.27.1853.940" timestamp="1605023890036" />
-    <state x="656" y="229" width="672" height="691" key="search.everywhere.popup" timestamp="1605041913429">
+    <state x="656" y="229" width="672" height="691" key="search.everywhere.popup" timestamp="1605205682304">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="656" y="225" width="672" height="678" key="search.everywhere.popup/67.27.1853.923@67.27.1853.923" timestamp="1604932349460" />
-    <state x="656" y="229" width="672" height="691" key="search.everywhere.popup/67.27.1853.940@67.27.1853.940" timestamp="1605041913429" />
+    <state x="656" y="229" width="672" height="691" key="search.everywhere.popup/67.27.1853.940@67.27.1853.940" timestamp="1605205682304" />
   </component>
 </project>

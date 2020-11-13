@@ -3,7 +3,10 @@
 
 #include <vector>
 #include <string>
+#include "Session.h"
 #include "Graph.h"
+#include "Tree.h"
+#include "Agent.h"
 
 class Agent;
 

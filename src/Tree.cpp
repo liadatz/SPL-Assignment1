@@ -2,6 +2,7 @@
 #include "../include/Session.h"
 #include <queue>
 
+
 using namespace std;
 
 // TODO:arrange methods in private and public
@@ -86,26 +87,26 @@ Tree *Tree::createTree(const Session &session, int rootLabel) {
     return tree;
 }
 
-Tree& Tree::runBFS(Session& session,int rootLabel) {
-    Tree* tree = createTree(session,rootLabel);
+void Tree::runBFS(Session& session) {
+//    Tree* tree = createTree(session,rootLabel);
     std::vector<std::vector<int>> edges = session.getGraphReference().getEdges();
     int numOfVertices = edges.size();
     int currVertex;
     std::vector<bool>visited(numOfVertices,false);
     std::queue<int> queue;
-    visited[rootLabel] = true;
-    queue.push(rootLabel);
+    visited[node] = true;
+    queue.push(node);
     while (!queue.empty()) {
         currVertex = queue.front();
         for (int i = 0; i < numOfVertices; ++i) {
             if (!visited[i] && edges[currVertex][i] == 1) {
                 visited[i] = true;
-                tree->addChild(createTree(session,i));
+                addChild(createTree(session,i));
                 queue.push(i);
             }
         }
     }
-    return *tree;
+//    return tree;
 }
 
 Tree *Tree::getChild(int i) {

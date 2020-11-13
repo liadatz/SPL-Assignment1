@@ -1,6 +1,3 @@
-//
-// Created by spl211 on 09/11/2020.
-//
 #include "../include/Session.h"
 #include <iostream>
 #include <fstream>
@@ -37,9 +34,9 @@ int Session::getCurrCycle() const {
 
 void Session::enqueueInfected(int) {}
 
-void Session::dequeueInfected() {}
+int Session::dequeueInfected() {}
 
-void Session::getTreeType() const {}
+TreeType Session::getTreeType() const {}
 
 
 

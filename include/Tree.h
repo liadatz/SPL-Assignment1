@@ -1,6 +1,9 @@
 #ifndef TREE_H_
 #define TREE_H_
-#include "../include/Session.h"
+#include "Session.h"
+#include "Graph.h"
+#include "Tree.h"
+#include "Agent.h"
 
 #include <vector>
 
@@ -22,7 +25,7 @@ public:
     static Tree* createTree(const Session& session, int rootLabel);
     virtual int traceTree()=0;
     virtual Tree* clone() const=0;
-    Tree& runBFS(Session& session,int rootLabel);
+    void runBFS(Session& session);
     Tree* getChild(int i);
     void clear();
     int getNodeNumber () const;
