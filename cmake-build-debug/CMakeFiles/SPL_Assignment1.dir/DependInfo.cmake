@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/spl211/CLionProjects/SPL-Assignment1/src/Session.cpp" "/home/spl211/CLionProjects/SPL-Assignment1/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/src/Session.cpp.o"
   "/home/spl211/CLionProjects/SPL-Assignment1/src/Tree.cpp" "/home/spl211/CLionProjects/SPL-Assignment1/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/src/Tree.cpp.o"
   "/home/spl211/CLionProjects/SPL-Assignment1/src/main.cpp" "/home/spl211/CLionProjects/SPL-Assignment1/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/src/main.cpp.o"
+  "/home/spl211/CLionProjects/SPL-Assignment1/src/test.cpp" "/home/spl211/CLionProjects/SPL-Assignment1/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/src/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

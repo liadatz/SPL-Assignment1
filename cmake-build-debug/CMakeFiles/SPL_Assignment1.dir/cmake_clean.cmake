@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SPL_Assignment1.dir/src/Session.cpp.o"
   "CMakeFiles/SPL_Assignment1.dir/src/Tree.cpp.o"
   "CMakeFiles/SPL_Assignment1.dir/src/main.cpp.o"
+  "CMakeFiles/SPL_Assignment1.dir/src/test.cpp.o"
   "SPL_Assignment1"
   "SPL_Assignment1.pdb"
 )

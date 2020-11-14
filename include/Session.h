@@ -3,10 +3,7 @@
 
 #include <vector>
 #include <string>
-#include "Session.h"
 #include "Graph.h"
-#include "Tree.h"
-#include "Agent.h"
 
 class Agent;
 
@@ -28,7 +25,7 @@ public:
     void enqueueInfected(int);
     int dequeueInfected();
 
-    // Getters
+
     Graph& getGraphReference();
     TreeType getTreeType() const;
     int getCurrCycle() const;

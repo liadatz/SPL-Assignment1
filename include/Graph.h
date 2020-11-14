@@ -1,9 +1,7 @@
 #ifndef GRAPH_H_
 #define GRAPH_H_
 
-#include "Session.h"
 #include "Tree.h"
-#include "Agent.h"
 #include <vector>
 
 using namespace std;
@@ -16,6 +14,7 @@ public:
     std::vector<std::vector<int>>& getEdgesReference();
     std::vector<int>& getNeighbors(nodeInd);
     void removeEdges (int nodeInd);
+
 
     std::vector<int> nodesStatus; // Number indicator: 0-no virus(healthy) present 1-carrying virus 2-ill
 private:

@@ -1,11 +1,13 @@
+#include "../include/Tree.h"
 #include "../include/Agent.h"
+#include "../include/Session.h"
 
 
 // Constructor
-Agent::Agent() {}
+Agent::Agent() = default;
 
 //------------ContactTracer----------------
-ContactTracer::ContactTracer() {}
+ContactTracer::ContactTracer() = default;
 
 Agent* ContactTracer::clone() const {return new ContactTracer(*this);}
 
