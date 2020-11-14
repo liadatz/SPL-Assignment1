@@ -16,24 +16,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3c5596cf-0d15-49d3-ab92-06f0e9d38693" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPL_Assignment1.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SPL_Assignment1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SPL_Assignment1.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Agent.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Agent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Graph.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Session.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Session.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Tree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Agent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Session.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Session.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +62,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="SPL_Assignment1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SPL_Assignment1" TARGET_NAME="SPL_Assignment1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SPL_Assignment1" RUN_TARGET_NAME="SPL_Assignment1">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="SPL_Assignment1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SPL_Assignment1" TARGET_NAME="SPL_Assignment1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SPL_Assignment1" RUN_TARGET_NAME="SPL_Assignment1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -104,7 +90,8 @@
       <workItem from="1604999947463" duration="40692000" />
       <workItem from="1605118975125" duration="16086000" />
       <workItem from="1605283227642" duration="6261000" />
-      <workItem from="1605293651559" duration="2710000" />
+      <workItem from="1605293651559" duration="11638000" />
+      <workItem from="1605368874035" duration="2269000" />
     </task>
     <task id="LOCAL-00001" summary="check">
       <created>1604931813788</created>
@@ -162,7 +149,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605283342771</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix headers">
+      <created>1605355541863</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605355541863</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix some issues">
+      <created>1605363862119</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605363862119</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +177,9 @@
     <MESSAGE value="Added traceTree for MaxRankTree and CycleTree" />
     <MESSAGE value="Finish Tree Class" />
     <MESSAGE value="Added act method to Agent" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added act method to Agent" />
+    <MESSAGE value="fix headers" />
+    <MESSAGE value="fix some issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some issues" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605117311403">
@@ -191,11 +194,11 @@
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="726" y="245" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.940@67.27.1853.940" timestamp="1605295696724" />
-    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2" timestamp="1605283342524">
+    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2" timestamp="1605363861956">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="532" y="35" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.923@67.27.1853.923" timestamp="1604940006978" />
-    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2/67.27.1853.940@67.27.1853.940" timestamp="1605283342524" />
+    <state x="518" y="27" width="912" height="915" key="CommitChangelistDialog2/67.27.1853.940@67.27.1853.940" timestamp="1605363861956" />
     <state x="242" y="101" width="1482" height="782" key="DiffContextDialog" timestamp="1605045207988">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
@@ -208,11 +211,11 @@
       <screen x="67" y="27" width="1853" height="923" />
     </state>
     <state x="482" y="122" key="SettingsEditor/67.27.1853.923@67.27.1853.923" timestamp="1604932368816" />
-    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605283345186">
+    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1605363863414">
       <screen x="67" y="27" width="1853" height="940" />
     </state>
     <state x="588" y="223" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.923@67.27.1853.923" timestamp="1604940016293" />
-    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.940@67.27.1853.940" timestamp="1605283345186" />
+    <state x="588" y="227" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.940@67.27.1853.940" timestamp="1605363863414" />
     <state x="774" y="409" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605128566314">
       <screen x="67" y="27" width="1853" height="940" />
     </state>

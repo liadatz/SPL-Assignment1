@@ -19,6 +19,7 @@ public:
     //------------Rule-Of-5--------------------
     Session(const std::string& path);
     ~Session();
+    Session(const Session &other);
 
     //------------Methods--------------------
     
@@ -27,13 +28,14 @@ public:
     void setGraph(const Graph& graph);
 
     
-    void enqueueInfected(int);
+    void enqueueInfected(int nodeInd);
     int dequeueInfected();
 
 
     Graph& getGraphReference();
     TreeType getTreeType() const;
     int getCurrCycle() const;
+    void clear();
     
 private:
     Graph g;

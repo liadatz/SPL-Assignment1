@@ -14,7 +14,7 @@ public:
     std::vector<std::vector<int>>& getEdgesReference();
     std::vector<int>& getNeighbors(int nodeInd);
     void removeEdges (int nodeInd);
-    bool checkStopCondition();
+    bool checkTerminationCondition();
 
 
     std::vector<int> nodesStatus; // Number indicator: 0-healthy 1-carrying virus 2-sick

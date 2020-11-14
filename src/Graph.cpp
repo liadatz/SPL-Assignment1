@@ -29,7 +29,7 @@ std::vector<int>& Graph::getNeighbors(int nodeInd) {
     return edges[nodeInd];
 }
 
-bool Graph::checkStopCondition() {
+bool Graph::checkTerminationCondition() {
     int nodeStatus = nodesStatus[0];
     for (int i = 1; i < nodesStatus.size(); i++)
         if(nodeStatus != nodesStatus[i]) return false;
