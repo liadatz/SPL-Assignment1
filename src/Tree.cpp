@@ -70,14 +70,14 @@ void Tree::addChild(const Tree &child) {
     children.insert(it, i, childClone);
 }
 
-void Tree::addChild(Tree *child) {
-    Tree* childTree = new Tree (child); // TODO: check
-    std::vector<Tree*>::iterator it = children.begin();
-    int i = 0;
-    while (childTree->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
-    children.insert(it, i, childTree);
-
-}
+//void Tree::addChild(Tree *child) {
+//    Tree* childTree = new Tree (child); // TODO: check
+//    std::vector<Tree*>::iterator it = children.begin();
+//    int i = 0;
+//    while (childTree->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
+//    children.insert(it, i, childTree);
+//
+//}
 
 Tree *Tree::createTree(const Session &session, int rootLabel) {
     Tree *tree;
@@ -101,7 +101,7 @@ void Tree::runBFS(Session& session) {
         for (int i = 0; i < numOfVertices; ++i) {
             if (!visited[i] && edges[currVertex][i] == 1) {
                 visited[i] = true;
-                addChild(createTree(session,i));
+                addChild(*createTree(session,i));
                 queue.push(i);
             }
         }

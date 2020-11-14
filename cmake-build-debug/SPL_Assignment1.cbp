@@ -99,12 +99,6 @@
 		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/main.cpp">
 			<Option target="SPL_Assignment1"/>
 		</Unit>
-		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/test.cpp">
-			<Option target="SPL_Assignment1"/>
-		</Unit>
-		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/src/testA.h">
-			<Option target="SPL_Assignment1"/>
-		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/SPL-Assignment1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

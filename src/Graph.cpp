@@ -7,11 +7,11 @@ Graph::Graph(std::vector<std::vector<int>> matrix):edges(matrix),nodesStatus(){ 
 }
 
 void Graph::infectNode(int nodeInd) {
-    nodesStatus.at(nodeInd) = 2;
+    nodesStatus.at(nodeInd) = 1;
     }
 
 bool Graph::isInfected(int nodeInd) {
-    return nodesStatus.at(nodeInd) == 2;
+    return nodesStatus.at(nodeInd) == 1 | nodesStatus.at(nodeInd) == 2;
 }
 
 std::vector<std::vector<int>>& Graph::getEdgesReference() {
@@ -27,4 +27,11 @@ void Graph::removeEdges(int nodeInd) {
 
 std::vector<int>& Graph::getNeighbors(int nodeInd) {
     return edges[nodeInd];
+}
+
+bool Graph::checkStopCondition() {
+    int nodeStatus = nodesStatus[0];
+    for (int i = 1; i < nodesStatus.size(); i++)
+        if(nodeStatus != nodesStatus[i]) return false;
+    return true;
 }

@@ -1,7 +1,6 @@
 #ifndef TREE_H_
 #define TREE_H_
 #include "Graph.h"
-#include "Tree.h"
 
 #include <vector>
 
@@ -19,7 +18,7 @@ public:
 
 //------------Methods--------------------
     void addChild(const Tree& child);
-    void addChild(Tree* child);
+//    void addChild(Tree* child);
     static Tree* createTree(const Session& session, int rootLabel);
     virtual int traceTree()=0;
     virtual Tree* clone() const=0;

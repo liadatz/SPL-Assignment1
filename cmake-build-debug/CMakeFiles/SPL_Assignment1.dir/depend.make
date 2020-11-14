@@ -28,5 +28,3 @@ CMakeFiles/SPL_Assignment1.dir/src/main.cpp.o: ../include/Session.h
 CMakeFiles/SPL_Assignment1.dir/src/main.cpp.o: ../include/Tree.h
 CMakeFiles/SPL_Assignment1.dir/src/main.cpp.o: ../src/main.cpp
 
-CMakeFiles/SPL_Assignment1.dir/src/test.cpp.o: ../src/test.cpp
-

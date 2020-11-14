@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <queue>
 #include "Graph.h"
 
 class Agent;
@@ -15,7 +16,11 @@ enum TreeType{
 
 class Session{
 public:
+    //------------Rule-Of-5--------------------
     Session(const std::string& path);
+    ~Session();
+
+    //------------Methods--------------------
     
     void simulate();
     void addAgent(const Agent& agent);
@@ -35,6 +40,7 @@ private:
     TreeType treeType;
     std::vector<Agent*> agents;
     int currCycle;
+    std::queue<int> infectedQueue;
 };
 
 #endif
