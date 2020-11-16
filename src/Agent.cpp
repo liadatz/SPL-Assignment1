@@ -33,8 +33,8 @@ void Virus::act(Session &session) {
     g.infectNode(nodeInd);
     for (int i = 0; i < nodeNeighbors.size(); i++){
         if (nodeNeighbors[i] == 1 && g.nodesStatus[i] == 0) {
-            g.nodesStatus[i] = 1;
             Virus newVirus = Virus(i);
+            g.infectNode(i);
             session.addAgent(newVirus);
             session.enqueueInfected(i);
             break;

@@ -13,7 +13,7 @@ Tree::Tree(int rootLabel) : node(rootLabel), children() {}
 
 // Destructor
 Tree::~Tree() {
-    delete this; // TODO:maybe delete 'this'?
+//    delete this; // TODO:maybe delete 'this'?
     clear();
 }
 
@@ -66,18 +66,17 @@ void Tree::addChild(const Tree &child) {
     Tree* childClone = child.clone();
     std::vector<Tree*>::iterator it = children.begin();
     int i = 0;
-    while (childClone->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
-    children.insert(it, i, childClone);
+    while (i < children.size() && childClone->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
+    children.insert(it+i, childClone);
 }
 
-//void Tree::addChild(Tree *child) {
-//    Tree* childTree = new Tree (child); // TODO: check
-//    std::vector<Tree*>::iterator it = children.begin();
-//    int i = 0;
-//    while (childTree->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
-//    children.insert(it, i, childTree);
-//
-//}
+void Tree::addChild(Tree *child) {
+    std::vector<Tree*>::iterator it = children.begin();
+    int i = 0;
+    while (i < children.size() && child->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
+    children.insert(it+i, child);
+
+}
 
 Tree *Tree::createTree(const Session &session, int rootLabel) {
     Tree *tree;
@@ -92,17 +91,21 @@ void Tree::runBFS(Session& session) {
     std::vector<std::vector<int>>& edges = session.getGraphReference().getEdgesReference();
     int numOfVertices = edges.size();
     int currVertex;
+    Tree* currTree;
     std::vector<bool>visited(numOfVertices,false);
-    std::queue<int> queue;
+    std::queue<Tree*> queue;
     visited[node] = true;
-    queue.push(node);
+    queue.push(this);
     while (!queue.empty()) {
-        currVertex = queue.front();
-        for (int i = 0; i < numOfVertices; ++i) {
+        currTree = queue.front();
+        currVertex = currTree->node;
+        queue.pop();
+        for (int i = 0; i < numOfVertices; i++) {
             if (!visited[i] && edges[currVertex][i] == 1) {
                 visited[i] = true;
-                addChild(*createTree(session,i));
-                queue.push(i);
+                Tree* nextTree = createTree(session,i);
+                currTree->addChild(nextTree);
+                queue.push(nextTree);
             }
         }
     }
@@ -153,14 +156,18 @@ int MaxRankTree::traceTree() {
     int maxRankNode = node;
     int maxRank = children.size();
     Tree *currTree;
-    std::queue<Tree *> queue;
+    std::queue<Tree*> queue;
     queue.push(this);
     while (!queue.empty()) {
         currTree = queue.front();
+        queue.pop();
         for (int i = 0; i < currTree->getNumOfChildren(); i++) {
-            Tree *child = getChild(i);
+            Tree *child = currTree->getChild(i);
             queue.push(child);
-            if (child->getNumOfChildren() > maxRank) maxRankNode = child->getNodeNumber();
+            if (child->getNumOfChildren() > maxRank) {
+                maxRankNode = child->getNodeNumber();
+                maxRank = child->getNumOfChildren();
+            }
         }
     }
     return maxRankNode;

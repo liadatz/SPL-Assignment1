@@ -20,16 +20,17 @@ Session::Session(const std::string &path):g{{}},agents(),infectedQueue(),currCyc
     // Initiate agent
     int ind = 0;
     for (auto& agent: j["agents"]) {
-        if (agent[ind][0] == "C") {
+        if (agent[0] == "C") {
             ContactTracer* CT = new ContactTracer();
             addAgent(*CT);
-            delete (CT); // maybe not needed
+            delete (CT);
         }
         else {
-            Virus* virus = new Virus (agent[ind][1]);
+            Virus* virus = new Virus (agent[1]);
             addAgent(*virus);
             this->g.nodesStatus[ind] = 1; //~Stav
-            delete (virus); // maybe not needed
+            enqueueInfected(agent[1]);
+            delete (virus);
         }
         ind++;
     }
@@ -121,6 +122,7 @@ void Session::simulate() {
     }
     output["infected"] = infected;
     i << output;
+    cout << "finished";
 }
 
 

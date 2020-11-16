@@ -7,8 +7,10 @@ Graph::Graph(std::vector<std::vector<int>> matrix):edges(matrix),nodesStatus(),n
 }
 
 void Graph::infectNode(int nodeInd) {
-    nodesStatus.at(nodeInd) = 1;
+    if (nodesStatus.at(nodeInd) != 2) {
+        nodesStatus.at(nodeInd)++;
     }
+}
 
 bool Graph::isInfected(int nodeInd) {
     return nodesStatus.at(nodeInd) == 1 | nodesStatus.at(nodeInd) == 2;
