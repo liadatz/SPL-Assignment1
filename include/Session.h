@@ -19,8 +19,10 @@ public:
     //------------Rule-Of-5--------------------
     Session(const std::string& path);
     ~Session();
-    Session(const Session &other);
-
+    Session(const Session& other);
+    Session(Session&& other);
+    Session& operator=(const Session& other);
+    Session& operator=(Session&& other);
     //------------Methods--------------------
     
     void simulate();

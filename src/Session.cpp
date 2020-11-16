@@ -28,6 +28,7 @@ Session::Session(const std::string &path):g{{}},agents(),infectedQueue(),currCyc
         else {
             Virus* virus = new Virus (agent[ind][1]);
             addAgent(*virus);
+            this->g.nodesStatus[ind] = 1; //~Stav
             delete (virus); // maybe not needed
         }
         ind++;
@@ -38,29 +39,90 @@ Session::Session(const std::string &path):g{{}},agents(),infectedQueue(),currCyc
     else if (j["tree"] == "M") treeType  = MaxRank;
     else treeType = Root;
 }
-
+//~Stav:
 // Destructor
 Session::~Session() {
     clear();
 }
 
 // Copy Constructor
-Session::Session(const Session &other) : g(other.g),agents(),infectedQueue(other.infectedQueue),currCycle(other.currCycle) {
+Session::Session(const Session &other) : g(other.g),agents(),infectedQueue(other.infectedQueue),
+                                         currCycle(other.currCycle),treeType(other.treeType) { //Stav: Added treeType
     for (auto& agent : other.agents) {
         addAgent(*agent);
     }
 }
 
 // Move Constructor
+Session::Session(Session&& other) : g(other.g),agents(),infectedQueue(other.infectedQueue),
+                                    currCycle(other.currCycle),treeType(other.treeType) {
+    int i = 0;
+    for (auto& agent : other.agents) {
+        this->agents[i] = other.agents[i];
+        i++;
+    }
+    //clearing other:
+    std::vector<std::vector<int>> emptyG;
+    other.g = Graph(emptyG);//Clearing the graph
+    other.clear();
+    other.currCycle = 0;
+    std::queue<int> emptyQ;
+    std::swap(other.infectedQueue, emptyQ);//Clearing the queue
+}
+
 
 // Copy Assignment
+Session& Session::operator=(const Session &other){
+    if(this != &other){
+        this->g = other.g;
+        this->treeType = other.treeType;
+        this->currCycle = other.currCycle;
+        clear();
+        for (auto& agent : other.agents)
+            addAgent(*agent);
+        this->infectedQueue = other.infectedQueue;
+    }
+    return *this;
+}
 
 // Move Assignment
-
-
+Session& Session::operator=(Session &&other){
+    if(this != &other){
+        this->g = other.g;
+        this->treeType = other.treeType;
+        this->currCycle = other.currCycle;
+        clear();
+        int i = 0;
+        for (auto& agent : other.agents) {
+            this->agents[i] = other.agents[i];
+            i++;
+        }
+        this->infectedQueue = other.infectedQueue;
+        other.clear();
+    }
+    return *this;
+}
 //------------Methods--------------------
 void Session::simulate() {
+    while(!g.checkStopCondition()){
+        currCycle++;
+        int size = agents.size();
+        for (int i = 0; i < size; i++) {
+            agents[i]->act(*this);
+        }
+    }
+    json output;
+    ofstream i("../output.json");
+    output["graph"] = g.getEdgesReference();
+    std::vector<int> infected;
+    for(int i=0; i < g.nodesStatus.size() ; i++){
+        if(g.nodesStatus[i] != 0)
+            infected.push_back(i);
+    }
+    output["infected"] = infected;
+    i << output;
 }
+
 
 void Session::addAgent(const Agent &agent) {
     agents.push_back(agent.clone());

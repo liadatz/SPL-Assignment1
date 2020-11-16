@@ -14,12 +14,13 @@ public:
     std::vector<std::vector<int>>& getEdgesReference();
     std::vector<int>& getNeighbors(int nodeInd);
     void removeEdges (int nodeInd);
-    bool checkTerminationCondition();
+    bool checkStopCondition();
 
 
     std::vector<int> nodesStatus; // Number indicator: 0-healthy 1-carrying virus 2-sick
 private:
     std::vector<std::vector<int>> edges;
+    int nOfUnhealthy;
 
 };
 
