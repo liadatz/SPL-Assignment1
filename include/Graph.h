@@ -6,6 +6,12 @@
 
 using namespace std;
 
+enum nodeState{
+    Healthy,
+    Carrier,
+    Infected
+};
+
 class Graph{
 public:
     Graph(std::vector<std::vector<int>> matrix);

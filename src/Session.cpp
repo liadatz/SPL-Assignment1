@@ -28,8 +28,8 @@ Session::Session(const std::string &path):g{{}},treeType(),agents(),currCycle(0)
         else {
             Virus* virus = new Virus (agent[1]);
             addAgent(*virus);
-            this->g.nodesStatus[ind] = 1; //~Stav
-            enqueueInfected(agent[1]);
+            g.nodesStatus[ind] = Carrier; //~Stav
+//            enqueueInfected(agent[1]);
             delete (virus);
         }
         ind++;
@@ -106,11 +106,11 @@ Session& Session::operator=(Session &&other){
 //------------Methods--------------------
 void Session::simulate() {
     while(!g.checkStopCondition()){
-        currCycle++;
         int size = agents.size();
         for (int i = 0; i < size; i++) {
             agents[i]->act(*this);
         }
+        currCycle++;
     }
     json output;
     ofstream i("./output.json");

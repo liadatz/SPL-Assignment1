@@ -133,9 +133,9 @@ CycleTree::CycleTree(int rootLabel, int currCycle) : Tree(rootLabel), currCycle(
 int CycleTree::traceTree() {
     int c = currCycle;
     int output = getNodeNumber();
-    Tree *currTree;
-    while ((c > 0) & !children.empty()) {
-        currTree = getChild(0);
+    Tree *currTree = this;
+    while ((c > 0) & (currTree->getNumOfChildren() != 0)) {
+        currTree = currTree->getChild(0);
         output = currTree->getNodeNumber();
         c--;
     }

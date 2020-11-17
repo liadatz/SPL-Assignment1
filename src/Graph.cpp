@@ -2,17 +2,15 @@
 
 Graph::Graph(std::vector<std::vector<int>> matrix):nodesStatus(),edges(matrix),nOfUnhealthy(-1){ // TODO: Check error
     for (unsigned int i=0;i<edges.size();i++)
-        nodesStatus.push_back(0); // init node's vector
+        nodesStatus.push_back(Healthy); // init node's vector
 }
 
 void Graph::infectNode(int nodeInd) {
-    if (nodesStatus.at(nodeInd) != 2) {
-        nodesStatus.at(nodeInd)++;
-    }
+    nodesStatus[nodeInd] = Infected;
 }
 
 bool Graph::isInfected(int nodeInd) {
-    return (nodesStatus.at(nodeInd) == 1) | (nodesStatus.at(nodeInd) == 2);
+    return nodesStatus[nodeInd] == Infected;
 }
 
 std::vector<std::vector<int>>& Graph::getEdgesReference() {
@@ -32,13 +30,9 @@ std::vector<int>& Graph::getNeighbors(int nodeInd) {
 
 bool Graph::checkStopCondition() {
     int counter = 0;
-    for (int &node : nodesStatus) {
-        if (node != 0)
-            counter++;
-    }
-    if (counter == nOfUnhealthy) {
-        return true;
-    } else {
+    for (int &node : nodesStatus) if (node != Healthy) counter++;
+    if (counter == nOfUnhealthy) return true;
+    else {
         nOfUnhealthy = counter;
         return false;
     }

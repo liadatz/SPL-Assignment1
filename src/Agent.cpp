@@ -31,13 +31,15 @@ Agent* Virus::clone() const {return new Virus(*this);}
 void Virus::act(Session &session) {
     Graph& g = session.getGraphReference();
     std::vector<int>& nodeNeighbors = g.getNeighbors(nodeInd);
-    g.infectNode(nodeInd);
+    if(!g.isInfected(nodeInd)) {
+        g.infectNode(nodeInd);
+        session.enqueueInfected(nodeInd);
+    }
     for (unsigned int i = 0; i < nodeNeighbors.size(); i++){
         if (nodeNeighbors[i] == 1 && g.nodesStatus[i] == 0) {
             Virus newVirus = Virus(i);
-            g.infectNode(i);
+            g.nodesStatus[i] = Carrier;
             session.addAgent(newVirus);
-            session.enqueueInfected(i);
             break;
         }
     }
