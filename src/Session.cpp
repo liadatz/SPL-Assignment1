@@ -10,8 +10,8 @@ using namespace std;
 
 //------------Rule-Of-5--------------------
 // Constructor
-Session::Session(const std::string &path):g{{}},agents(),infectedQueue(),currCycle(0){
-    ifstream i("../config1.json");
+Session::Session(const std::string &path):g{{}},treeType(),agents(),currCycle(0),infectedQueue(){
+    ifstream i(path);
     json j;
     i >> j;
     // Initiate graph
@@ -47,19 +47,19 @@ Session::~Session() {
 }
 
 // Copy Constructor
-Session::Session(const Session &other) : g(other.g),agents(),infectedQueue(other.infectedQueue),
-                                         currCycle(other.currCycle),treeType(other.treeType) { //Stav: Added treeType
+Session::Session(const Session &other) : g(other.g),treeType(other.treeType),agents(),
+                                        currCycle(other.currCycle),infectedQueue(other.infectedQueue)  { //Stav: Added treeType
     for (auto& agent : other.agents) {
         addAgent(*agent);
     }
 }
 
 // Move Constructor
-Session::Session(Session&& other) : g(other.g),agents(),infectedQueue(other.infectedQueue),
-                                    currCycle(other.currCycle),treeType(other.treeType) {
+Session::Session(Session&& other) : g(other.g),treeType(other.treeType),agents(),
+                                    currCycle(other.currCycle),infectedQueue(other.infectedQueue) {
     int i = 0;
     for (auto& agent : other.agents) {
-        this->agents[i] = other.agents[i];
+        this->agents[i] = agent;
         i++;
     }
     //clearing other:
@@ -95,7 +95,7 @@ Session& Session::operator=(Session &&other){
         clear();
         int i = 0;
         for (auto& agent : other.agents) {
-            this->agents[i] = other.agents[i];
+            this->agents[i] = agent;
             i++;
         }
         this->infectedQueue = other.infectedQueue;
@@ -113,12 +113,12 @@ void Session::simulate() {
         }
     }
     json output;
-    ofstream i("../output.json");
+    ofstream i("./output.json");
     output["graph"] = g.getEdgesReference();
     std::vector<int> infected;
-    for(int i=0; i < g.nodesStatus.size() ; i++){
-        if(g.nodesStatus[i] != 0)
-            infected.push_back(i);
+    for(uint j=0; j < g.nodesStatus.size() ; j++){
+        if(g.nodesStatus[j] != 0)
+            infected.push_back(j);
     }
     output["infected"] = infected;
     i << output;

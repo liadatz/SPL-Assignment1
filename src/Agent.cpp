@@ -4,6 +4,7 @@
 
 // Constructor
 Agent::Agent() = default;
+Agent::~Agent() {}
 
 //------------ContactTracer----------------
 ContactTracer::ContactTracer() = default;
@@ -31,7 +32,7 @@ void Virus::act(Session &session) {
     Graph& g = session.getGraphReference();
     std::vector<int>& nodeNeighbors = g.getNeighbors(nodeInd);
     g.infectNode(nodeInd);
-    for (int i = 0; i < nodeNeighbors.size(); i++){
+    for (uint i = 0; i < nodeNeighbors.size(); i++){
         if (nodeNeighbors[i] == 1 && g.nodesStatus[i] == 0) {
             Virus newVirus = Virus(i);
             g.infectNode(i);

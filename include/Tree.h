@@ -10,7 +10,7 @@ class Tree{
 public:
 //------------Rule Of 5--------------------
     Tree(int rootLabel);
-    ~Tree();
+    virtual ~Tree();
     Tree(const Tree& other);
     Tree(Tree &&other);
     Tree& operator=(const Tree& other);
@@ -23,7 +23,7 @@ public:
     virtual int traceTree()=0;
     virtual Tree* clone() const=0;
     void runBFS(Session& session);
-    Tree* getChild(int i);
+    Tree* getChild(unsigned int i);
     void clear();
     int getNodeNumber () const;
     int getNumOfChildren ();

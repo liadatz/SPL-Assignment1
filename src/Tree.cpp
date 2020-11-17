@@ -28,7 +28,7 @@ Tree::Tree(const Tree &other) : node(other.node), children(){
 Tree::Tree(Tree &&other) : node(other.node), children() {
     int i = 0;
     for (auto &child : other.children) {
-        this->children[i] = other.children[i];
+        this->children[i] = child;
         i++;
     }
     other.children.clear();
@@ -52,7 +52,7 @@ Tree& Tree::operator=(Tree &&other){
         this->node = other.node;
         int i = 0;
         for (auto &child : other.children) {
-            this->children[i] = other.children[i];
+            this->children[i] = child;
             i++;
         }
         other.children.clear();
@@ -65,14 +65,14 @@ Tree& Tree::operator=(Tree &&other){
 void Tree::addChild(const Tree &child) {
     Tree* childClone = child.clone();
     std::vector<Tree*>::iterator it = children.begin();
-    int i = 0;
+    unsigned int i = 0;
     while (i < children.size() && childClone->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
     children.insert(it+i, childClone);
 }
 
 void Tree::addChild(Tree *child) {
     std::vector<Tree*>::iterator it = children.begin();
-    int i = 0;
+    unsigned int i = 0;
     while (i < children.size() && child->node > children[i]->node) i++; // TODO: check for case when children is empty possible error
     children.insert(it+i, child);
 
@@ -112,7 +112,7 @@ void Tree::runBFS(Session& session) {
 //    return tree;
 }
 
-Tree *Tree::getChild(int i) {
+Tree *Tree::getChild(unsigned int i) {
     if (i <= children.size()) return children[i];
     else return nullptr;
 }
