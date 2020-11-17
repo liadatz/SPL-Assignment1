@@ -58,7 +58,7 @@ Session::Session(const Session &other) : g(other.g),treeType(other.treeType),age
 Session::Session(Session&& other) : g(other.g),treeType(other.treeType),agents(),
                                     currCycle(other.currCycle),infectedQueue(other.infectedQueue) {
     int i = 0;
-    for (auto& agent : other.agents) {
+    for (auto& agent : other.agents) { // maybe give size to vector?
         this->agents[i] = agent;
         i++;
     }
@@ -116,7 +116,7 @@ void Session::simulate() {
     ofstream i("./output.json");
     output["graph"] = g.getEdgesReference();
     std::vector<int> infected;
-    for(uint j=0; j < g.nodesStatus.size() ; j++){
+    for(unsigned int j=0; j < g.nodesStatus.size() ; j++){
         if(g.nodesStatus[j] != 0)
             infected.push_back(j);
     }
