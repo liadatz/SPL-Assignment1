@@ -13,7 +13,6 @@ Tree::Tree(int rootLabel) : node(rootLabel), children() {}
 
 // Destructor
 Tree::~Tree() {
-//    delete this; // TODO:maybe delete 'this'?
     clear();
 }
 
@@ -87,7 +86,6 @@ Tree *Tree::createTree(const Session &session, int rootLabel) {
 }
 
 void Tree::runBFS(Session& session) {
-//    Tree* tree = createTree(session,rootLabel);
     std::vector<std::vector<int>>& edges = session.getGraphReference().getEdgesReference();
     int numOfVertices = edges.size();
     int currVertex;
@@ -109,7 +107,6 @@ void Tree::runBFS(Session& session) {
             }
         }
     }
-//    return tree;
 }
 
 Tree *Tree::getChild(unsigned int i) {
