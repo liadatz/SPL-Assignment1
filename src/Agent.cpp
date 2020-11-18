@@ -1,5 +1,4 @@
 #include "../include/Agent.h"
-//#include "../include/Tree.h"
 #include "../include/Session.h"
 
 // Constructor
@@ -36,7 +35,7 @@ void Virus::act(Session &session) {
         session.enqueueInfected(nodeInd);
     }
     for (unsigned int i = 0; i < nodeNeighbors.size(); i++){
-        if (nodeNeighbors[i] == 1 && g.nodesStatus[i] == 0) {
+        if (nodeNeighbors[i] == 1 && g.nodesStatus[i] == Healthy) {
             Virus newVirus = Virus(i);
             g.nodesStatus[i] = Carrier;
             session.addAgent(newVirus);

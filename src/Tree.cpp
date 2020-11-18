@@ -25,10 +25,8 @@ Tree::Tree(const Tree &other) : node(other.node), children(){
 
 // Move Constructor
 Tree::Tree(Tree &&other) : node(other.node), children() {
-    int i = 0;
     for (auto &child : other.children) {
-        this->children[i] = child;
-        i++;
+        children.push_back(child);
     }
     other.children.clear();
 }
@@ -49,17 +47,13 @@ Tree& Tree::operator=(Tree &&other){
     if (this!=&other) {
         clear();
         this->node = other.node;
-        int i = 0;
         for (auto &child : other.children) {
-            this->children[i] = child;
-            i++;
+            children.push_back(child);
         }
         other.children.clear();
     }
     return *this;
 }
-
-
 //------------Methods--------------------
 void Tree::addChild(const Tree &child) {
     Tree* childClone = child.clone();

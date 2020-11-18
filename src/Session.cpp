@@ -18,7 +18,6 @@ Session::Session(const std::string &path):g{{}},treeType(),agents(),currCycle(0)
     g = Graph (j["graph"]);
 
     // Initiate agent
-    int ind = 0;
     for (auto& agent: j["agents"]) {
         if (agent[0] == "C") {
             ContactTracer* CT = new ContactTracer();
@@ -28,11 +27,9 @@ Session::Session(const std::string &path):g{{}},treeType(),agents(),currCycle(0)
         else {
             Virus* virus = new Virus (agent[1]);
             addAgent(*virus);
-            g.nodesStatus[ind] = Carrier; //~Stav
-//            enqueueInfected(agent[1]);
+            g.nodesStatus[agent[1]] = Carrier; //~Stav
             delete (virus);
         }
-        ind++;
     }
 
     // Initiate TreeType
